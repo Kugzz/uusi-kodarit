@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-<<<<<<< HEAD
-    <title>Page Title</title>
-=======
     <title> Karttasovellus </title>
 
-    <meta charset"utf-8">
+    <meta charset="utf-8">
 
->>>>>>> b5dcbcd... juttu
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-<<<<<<< HEAD
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-=======
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="js/sijainti_ja_kartta.js"> </script>
+    <script src="js/sijainti_ja_kartta.js"></script>
 
     <link rel="stylesheet" href="css/sijainti_ja_kartta.css"/>
 
   </head>
   <body>
-      <div class="otsikko">
-        <img src="kuvat/taustakuva.jpg" alt="" width=100%>
-        <div class="otsikon_teksti">
-          <h1> Seikkaillaan kartalla </h1>
-          <p> Kodareiden Mini Full stack -kurssilla. </p>
-        </div>
-      </div>
->>>>>>> b5dcbcd... juttu
 
+    <div class="otsikko">
+      <img src="kuvat/taustakuva.jpg" alt="Tässä pitäisi olla taustakuva" width=100%>
+      <div class="otsikon_teksti">
+        <h1> Seikkaillaan kartalla </h1>
+        <p> Kodareiden Mini Full Stack -kurssilla. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <p> pituusasteet </p>
+        <p id="pituusasteet"> </p>
+      </div>
+      <div class="col-sm-9">
+        <p> leveys asteet </p>
+        <p id="leveysasteet"> </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-7">
+
+        <div id="kartta"> </div>
+      </div>
+    </div>
+    
   </body>
 </html>
