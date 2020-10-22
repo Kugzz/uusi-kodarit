@@ -17,7 +17,7 @@ const paikat = [
     "paikka": "Levi",
     "arvostelu": "ei niin kivaa ollut",
     "longitude": "24.8082",
-    "latitude": "67,8040"
+    "latitude": "67.8040"
   }
 ]
 
