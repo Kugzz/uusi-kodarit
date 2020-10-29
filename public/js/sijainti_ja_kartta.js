@@ -40,6 +40,16 @@ function merkitsePaikat(data){
     olet_tassa.bindPopup("<b> Olet tässä </b><br>" + "haluatko merkitä paika?").openPopup();
   }
 }
+
+function tyhjenna_paikkataulukko(){
+  var table = document.getElementById("paikkataulukko");
+  var rivien_maara = table.rows.length -1;
+
+  for (var i = 0; i < rivien_maara; i++) {
+    table.deleteRow(1);
+  }
+}
+
 if ("geolocation" in navigator){
   console.log("sijaintitieto saatavilla");
   navigator.geolocation.getCurrentPosition(function(position){
@@ -83,4 +93,26 @@ function laheta_arvostelu() {
 
   console.log("paikka: " + paikka);
   console.log("Arvostelu: " + arvostelu);
+
+  const data = {paikka, arvostelu, longitude, latitude};
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-type":"application/json"
+    },
+    body: JSON.stringify(data)
+  };
+
+  console.log("Laheta arvostelu options: " , options);
+
+  fetch('api/arvostelu', options).then(function(response) {
+    console.log("Laheta arvostelu response: " , response)
+    if (response.status = 200) {
+      tyhjenna_paikkataulukko();
+      getData();
+      sulje_paikkatietolomake();
+    }
+  }, function(error) {
+    console.log(error);
+  });
 }
